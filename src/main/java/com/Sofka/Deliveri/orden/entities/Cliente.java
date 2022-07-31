@@ -2,7 +2,7 @@ package com.Sofka.Deliveri.orden.entities;
 
 import co.com.sofka.domain.generic.Entity;
 import com.Sofka.Deliveri.orden.value.ClienteID;
-import com.Sofka.Deliveri.orden.value.Direccion;
+import com.Sofka.Deliveri.orden.value.DireccionCliente;
 import com.Sofka.Deliveri.orden.value.MetodoPago;
 import com.Sofka.Deliveri.orden.value.NomCompletoCliente;
 
@@ -10,11 +10,11 @@ import java.util.Objects;
 
 public class Cliente extends Entity<ClienteID> {
     private NomCompletoCliente nombre;
-    private Direccion dir;
+    private DireccionCliente dir;
     private MetodoPago metodo;
 
 
-    public Cliente(ClienteID entityId, NomCompletoCliente nombre, Direccion dir, MetodoPago metodo) {
+    public Cliente(ClienteID entityId, NomCompletoCliente nombre, DireccionCliente dir, MetodoPago metodo) {
         super(entityId);
         this.nombre= nombre;
         this.dir = dir;
@@ -29,11 +29,11 @@ public class Cliente extends Entity<ClienteID> {
         this.nombre = Objects.requireNonNull(nombre) ;
     }
 
-    public Direccion getDir() {
+    public DireccionCliente getDir() {
         return dir;
     }
 
-    public void setDir(Direccion dir) {
+    public void setDir(DireccionCliente dir) {
         this.dir = Objects.requireNonNull(dir) ;
     }
 

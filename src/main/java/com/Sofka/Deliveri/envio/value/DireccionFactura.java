@@ -1,15 +1,15 @@
-package com.Sofka.Deliveri.orden.value;
+package com.Sofka.Deliveri.envio.value;
 
 import co.com.sofka.domain.generic.ValueObject;
 
 import java.util.Objects;
 
-public class Direccion implements ValueObject<String> {
+public class DireccionFactura implements ValueObject<String> {
     private final  String calle;
     private final String numPuerta;
     private final String ciudad;
 
-    public Direccion(String calle, String numPuerta, String ciudad) {
+    public DireccionFactura(String calle, String numPuerta, String ciudad) {
         this.calle = Objects.requireNonNull(calle) ;
         this.numPuerta = Objects.requireNonNull(numPuerta) ;
         this.ciudad = Objects.requireNonNull(ciudad) ;
@@ -27,7 +27,7 @@ public class Direccion implements ValueObject<String> {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Direccion direccion = (Direccion) o;
+        DireccionFactura direccion = (DireccionFactura) o;
         return Objects.equals(calle, direccion.calle) && Objects.equals(numPuerta, direccion.numPuerta) && Objects.equals(ciudad, direccion.ciudad);
     }
 
@@ -44,4 +44,5 @@ public class Direccion implements ValueObject<String> {
                 ", ciudad: '" + ciudad + '\'' +
                 '}';
     }
+
 }

@@ -46,7 +46,7 @@ public class Orden extends AggregateEvent<OrdenID>  {
         appendChange(new PrecioUpdated(productoID, precio)).apply();
     }
 
-    public void addCliente(NomCompletoCliente nomCompletoCliente, Direccion direccion, MetodoPago metodoPago){
+    public void addCliente(NomCompletoCliente nomCompletoCliente, DireccionCliente direccion, MetodoPago metodoPago){
         ClienteID clienteID= new ClienteID();
         appendChange(new ClienteAdded(clienteID, direccion, nomCompletoCliente,  metodoPago)).apply();
     }
@@ -56,7 +56,7 @@ public class Orden extends AggregateEvent<OrdenID>  {
         )).apply();
     }
 
-    public void updateDireccion(ClienteID clienteID, Direccion direccion){
+    public void updateDireccion(ClienteID clienteID, DireccionCliente direccion){
         appendChange(new DireccionUpdated(clienteID, direccion)).apply();
     }
 

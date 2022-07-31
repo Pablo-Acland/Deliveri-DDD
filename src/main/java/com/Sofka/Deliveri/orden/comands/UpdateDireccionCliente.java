@@ -2,15 +2,15 @@ package com.Sofka.Deliveri.orden.comands;
 
 import co.com.sofka.domain.generic.Command;
 import com.Sofka.Deliveri.orden.value.ClienteID;
-import com.Sofka.Deliveri.orden.value.Direccion;
+import com.Sofka.Deliveri.orden.value.DireccionCliente;
 import com.Sofka.Deliveri.orden.value.OrdenID;
 
-public class UpdateDireccion extends Command {
+public class UpdateDireccionCliente extends Command {
     private final OrdenID ordenID;
     private final ClienteID clienteID;
-    private final Direccion dir;
+    private final DireccionCliente dir;
 
-    public UpdateDireccion(OrdenID ordenID, ClienteID clienteID, Direccion dir) {
+    public UpdateDireccionCliente(OrdenID ordenID, ClienteID clienteID, DireccionCliente dir) {
         this.ordenID = ordenID;
         this.clienteID = clienteID;
         this.dir = dir;
@@ -24,7 +24,7 @@ public class UpdateDireccion extends Command {
         return clienteID;
     }
 
-    public Direccion getDir() {
+    public DireccionCliente getDir() {
         return dir;
     }
 }
